@@ -1,0 +1,25 @@
+<template>
+    <h3>${title}</h3>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Nationality</th>
+            <th>City</th>
+            <th>Bob</th>
+            <th>Age</th>
+            <th>Blockbuster</th>
+        </thead>
+        <tbody>
+            <tr repeteat.for="director of directors">
+                <td>${director.name}</td>
+                <td>${director.sex}</td>
+                <td>${director.nationality}</td>
+                <td>${director.city}</td>
+                <td>${director.dob}</td>
+                <td>${director.age}</td>
+                <td>${director.blockbuster}</td>
+            </tr>
+        </tbody>
+    </table>
+</template>
