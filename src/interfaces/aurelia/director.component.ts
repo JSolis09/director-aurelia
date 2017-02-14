@@ -30,11 +30,10 @@ export class DirectorComponent {
     }
 
     save(): void {
-        console.log(this.director);
         this.directorRepository.store(this.director)
-            .then((response) => {
-                this.goBack();
-            });
+        .then((response) => {
+            this.goBack();
+        });
     }
 
 }
