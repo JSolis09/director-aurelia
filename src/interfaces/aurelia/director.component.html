@@ -1,0 +1,40 @@
+<template>
+    <h2>${title}</h2>
+    <form name="form" submit.trigger="save()">
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" name="fullname" value.bind="director.fullName"></td>
+            </tr>
+            <tr>
+                <td>Gender: </td>
+                <td><input type="text" name="gender" value.bind="director.sex"></td>
+            </tr>
+            <tr>
+                <td>Nationality: </td>
+                <td><input type="text" name="nationality" value.bind="director.nationality"></td>
+            </tr>
+            <tr>
+                <td>City: </td>
+                <td><input type="text" name="city" value.bind="director.city"></td>
+            </tr>
+            <tr>
+                <td>Dob: </td>
+                <td><input type="text" name="dob" value.bind="director.dob"></td>
+            </tr>
+            <tr>
+                <td>Age: </td>
+                <td><input type="text" name="age" value.bind="director.age"></td>
+            </tr>
+        </table>
+        <h4>Blockbusters</h4>
+        <table>
+            <tbody>
+                <tr repeat.for="blockbuster of director.blockbusters">
+                    <td>name: </td><td><input type="text" name="blockbuster" value.bind="blockbuster.movieName" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" click.trigger="goBack()" >Volver</button> <button type="submit">Save</button>
+    </form>
+</template>

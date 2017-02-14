@@ -1,5 +1,5 @@
 <template>
-    <h3>${title}</h3>
+    <h2>${title}</h2>
     <table>
         <thead>
             <th>Name</th>
@@ -11,14 +11,16 @@
             <th>Blockbuster</th>
         </thead>
         <tbody>
-            <tr repeteat.for="director of directors">
-                <td>${director.name}</td>
+            <tr style="cursor: pointer;"
+                repeat.for="director of directors"
+                click.trigger = "goToDetail(director)">
+                <td>${director.fullName}</td>
                 <td>${director.sex}</td>
                 <td>${director.nationality}</td>
                 <td>${director.city}</td>
                 <td>${director.dob}</td>
                 <td>${director.age}</td>
-                <td>${director.blockbuster}</td>
+                <td>${getMovieName(director.blockbusters)}</td>
             </tr>
         </tbody>
     </table>
