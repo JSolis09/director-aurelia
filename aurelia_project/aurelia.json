@@ -5,7 +5,8 @@
     "id": "web",
     "displayName": "Web",
     "output": ".tmp/js",
-    "index": ".tmp/index.html"
+    "index": ".tmp/index.html",
+    "base": ".tmp"
   },
   "transpiler": {
     "id": "typescript",
@@ -38,7 +39,8 @@
         "id": "web",
         "displayName": "Web",
         "output": ".tmp/js",
-        "index": ".tmp/index.html"
+        "index": ".tmp/index.html",
+        "base": ".tmp"
       }
     ],
     "loader": {

@@ -24,7 +24,7 @@ let serve = gulp.series(
       port: 9001,
       logLevel: 'silent',
       server: {
-        baseDir: ['.tmp'],
+        baseDir: [project.platform.base],
         middleware: [historyApiFallback(), function(req, res, next) {
           res.setHeader('Access-Control-Allow-Origin', '*');
           next();
